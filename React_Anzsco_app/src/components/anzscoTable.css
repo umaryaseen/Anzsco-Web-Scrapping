@@ -1,0 +1,127 @@
+#secPage {
+  margin-left: 30px;
+}
+
+#title {
+  text-align: center;
+}
+#top {
+  background-color: rgb(252, 191, 78);
+  text-align: center;
+  margin-left: 0px;
+}
+
+dt {
+  margin-left: 15px !important;
+}
+
+dd {
+  margin-left: 35px !important;
+}
+
+dd ul {
+  margin-left: 20px;
+}
+
+tr {
+  text-align: left;
+}
+
+#students {
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+  width: 100%;
+  margin: auto;
+}
+
+#main {
+  padding: 10px;
+}
+
+#students {
+  border-style: solid;
+  border-color: black;
+}
+
+tr a {
+  text-decoration: none;
+}
+
+tr td a {
+  text-decoration: underline;
+}
+
+#students td,
+#students th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color: black;
+  width: 300px;
+  text-decoration: none !important;
+}
+
+#students tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#students tr:hover {
+  background-color: #ddd;
+}
+
+#students th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  color: black;
+  background-color: rgb(252, 191, 78);
+}
+
+/* Tooltip container */
+.tooltip {
+  position: absolute;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  opacity: 100 !important;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  right: 50%;
+  margin-left: -100px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 100%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

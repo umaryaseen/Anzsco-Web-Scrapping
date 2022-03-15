@@ -1,0 +1,369 @@
+
+['\n', <td><a href="anzsco/899999.php">899999 Labourers nec</a>
+  <ul style="margin:0px"><li>Bowling Alley Attendant
+  </li>
+  <li>Clothes Sorter
+  </li>
+  <li>Grip
+  </li>
+  <li>Racecourse Barrier Attendant
+  </li>
+  <li>Stagehand
+  </li>
+  <li>Studio Hand
+  </li>
+  <li>Swimming Pool Serviceperson</li>
+  </ul></td>, '\n', <td></td>, '\n', <td></td>, '\n', <td></td>, '\n', <td></td>, '\n', <td></td>, '\n', <td></td>, '\n']
+
+
+
+
+cursor.execute('''
+CREATE TABLE IF NOT EXISTS anzsco_sec (
+	"srno"	INTEGER PRIMARY KEY AUTOINCREMENT,
+	"head1"	TEXT,
+	"description"	TEXT,
+	"skill_level"	INTEGER,
+	"alternative_titles"	TEXT,
+	"skills_assess_authority"	TEXT,
+	"caveats"	TEXT,
+	"head2"	TEXT,
+	"desc"	TEXT,
+	"tasks"	TEXT,
+	"skill_level_desc"	TEXT,
+	"occupations_in_this_group"	TEXT
+);
+             ''')
+
+
+
+anzsco_sec = db.Table('anzsco_sec', db.MetaData(),
+db.Column('id', db.Integer, primary_key=True, autoincrement=True),
+db.Column('head1', db.Text),
+db.Column('description',db.Text),
+db.Column('skill_level',db.Integer),
+db.Column('alternative_titles',db.Text),
+db.Column('skills_assess_authority',db.Text),
+db.Column('caveats',db.Text),
+db.Column('head2',db.Text),
+db.Column('desc',db.Text),
+db.Column('tasks',db.Text),
+db.Column('skill_level_desc',db.Text),
+db.Column('occupations_in_this_group',db.Text),
+schema =None
+)
+
+
+
+
+<!DOCTYPE html>
+<html>
+<body><h2>Demo form</h2><form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="getValue(this)" onchange="save(this)"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="" onchange="save(this)">
+</form>
+
+<script>
+
+localStorage= window.localStorage
+
+function save(input) {
+    localStorage.setItem(input.id, input.value)
+  }
+
+ document.getElementById("fname").value=localStorage.getItem("fname")
+ document.getElementById("lname").value=localStorage.getItem("lname")</script></body>
+
+
+
+</html>
+
+
+
+
+<!-- 
+<script>
+
+function multiply (num1,num2=1){
+  
+  if(num2 !=1)
+  {
+    return num1*num2; 
+  }
+  
+  return anotherFunc;
+  
+  
+function anotherFunc(num2){
+  return num1*num2;
+}
+
+  
+}
+
+
+
+
+const anotherFunc = multiply(3);
+
+console.log(anotherFunc(5));
+
+console.log(multiply(10,10));
+
+
+
+</script>
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<script>
+class HelloEnv {
+  
+
+
+}
+
+HelloEnv.prototype.increment = 0;
+HelloEnv.prototype.decrement= 0;
+  
+  
+function increment(){
+  
+  this.increment++;
+}
+
+
+function decrement(){
+  
+  this.decrement--;
+  
+}
+const Hello = new HelloEnv();
+
+console.log(Hello.increment);
+
+console.log(Hello.decrement);
+
+increment.call(Hello);
+decrement.call(Hello);
+
+console.log(Hello.increment);
+console.log(Hello.decrement);
+
+
+</script>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Practice File</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+</head>
+<body>
+  
+  <input type ="button" value = "Submit" id="btn">
+
+
+</body>
+
+<script>
+
+  let btn = document.getElementById("btn");
+
+  //btn.addEventListener("click",function(){alert("Clicked!")});
+
+  btn.addEventListener("click",func1);
+  btn.addEventListener("click",func2);
+
+  function func1(){
+    alert("func1");
+  }
+  
+
+  function func2(){
+    alert("func2");
+  }
+
+</script>
+
+
+</html>
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Practice Page</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <script src='main.js'></script>
+</head>
+<body>
+  
+  <input type="text" id="inp"> <input type="button" id="btn" value="Submit" onclick="addItems()">
+  <ul id= "ul"></ul>
+
+
+</body>
+
+<script>
+
+  function addItems(){
+    let btn = document.getElementById("btn");
+    let inp = document.getElementById("inp");
+    let ul = document.getElementById("ul");
+
+    ul.innerHTML = "";
+
+    for (var i=0; i< parseInt(inp.value); i++)
+    {
+      //console.log("hello");
+      ul.innerHTML = ul.innerHTML +  "<li> Hello </li>";
+
+    }
+    ul.lastChild.remove();
+    
+  
+  }
+
+</script>
+
+</html>
+ -->
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+  <div>
+    <input id="colorInp" type="text"> <input type="button" id="btn" onclick="change()" value="change">
+  </div>
+</body>
+
+<script>
+
+function change(){
+
+
+color = document.getElementById("colorInp");
+btn = document.getElementById("btn");
+
+btn.style.color = color.value;
+console.log(btn)
+
+}
+</script>
+
+</html>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <body>
+  
+
+    <input id="elem" type="button" value="Click me"/>
+
+    <script>
+      function handler1() {
+        alert('Thanks!');
+      };
+    
+      function handler2() {
+        alert('Thanks again!');
+      }
+
+      document.addEventListener("DOMContentLoaded", function() {
+  alert("DOM built");
+});
+    
+
+      elem.onclick = () => alert("Hello");
+      elem.addEventListener("click", handler1); // Thanks!
+      elem.addEventListener("click", handler2); // Thanks again!
+    
+    </script>
+  
+
+</body> -->
